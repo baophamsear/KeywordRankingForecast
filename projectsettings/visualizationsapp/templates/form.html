@@ -1,0 +1,10 @@
+<form method="POST">
+  {% csrf_token %}
+  <label for="keyword">Nhập từ khóa:</label>
+  <input type="text" id="keyword" name="keyword">
+  <button type="submit">Gửi</button>
+</form>
+
+{% if uppercase_keyword %}
+  <p>Từ khóa viết hoa: {{ uppercase_keyword }}</p>
+{% endif %}
